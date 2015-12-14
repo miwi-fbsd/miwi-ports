@@ -1,0 +1,4 @@
+Additional facilities to supplement Python's stdlib logging
+module.
+
+WWW: https://bitbucket.org/jaraco/jaraco.logging/
