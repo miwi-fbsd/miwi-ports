@@ -206,6 +206,7 @@ USE_OPENSSL=	yes
 
 .if ${PHP_MODNAME} == "opcache"
 CONFIGURE_ARGS+=--enable-opcache
+USES+=	localbase
 .endif
 
 .if ${PHP_MODNAME} == "pcntl"
