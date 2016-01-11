@@ -314,8 +314,6 @@ mbstring_DEPENDS=	converters/php${PHP_VER}-mbstring
 mcrypt_DEPENDS=	security/php${PHP_VER}-mcrypt
 memcache_DEPENDS=	databases/pecl-memcache
 mhash_DEPENDS=	security/php${PHP_VER}-mhash
-mssql_DEPENDS=	databases/php${PHP_VER}-mssql
-mysql_DEPENDS=	databases/php${PHP_VER}-mysql
 mysqli_DEPENDS=	databases/php${PHP_VER}-mysqli
 ncurses_DEPENDS=devel/php${PHP_VER}-ncurses
 odbc_DEPENDS=	databases/php${PHP_VER}-odbc
@@ -327,7 +325,6 @@ opcache_DEPENDS=	www/pecl-zendopcache
 .endif	
 openssl_DEPENDS=security/php${PHP_VER}-openssl
 pcntl_DEPENDS=	devel/php${PHP_VER}-pcntl
-pcre_DEPENDS=	devel/php${PHP_VER}-pcre
 pdf_DEPENDS=	print/pecl-pdflib
 pdo_DEPENDS=	databases/php${PHP_VER}-pdo
 pdo_dblib_DEPENDS=	databases/php${PHP_VER}-pdo_dblib
