@@ -272,11 +272,11 @@ php-ini:
 _USE_PHP_ALL=	apc bcmath bitset bz2 calendar ctype curl dba dom \
 		exif fileinfo filter ftp gd gettext gmp \
 		hash iconv igbinary imap interbase intl json ldap mbstring mcrypt \
-		memcache mssql mysql mysqli odbc opcache \
+		memcache mysqli odbc opcache \
 		openssl pcntl pcre pdf pdo pdo_dblib pdo_firebird pdo_mysql \
 		pdo_odbc pdo_pgsql pdo_sqlite pgsql posix \
 		pspell radius readline recode session shmop simplexml snmp soap\
-		sockets spl sybase_ct sysvmsg sysvsem sysvshm \
+		sockets spl sysvmsg sysvsem sysvshm \
 		tidy tokenizer wddx xml xmlreader xmlrpc xmlwriter xsl zip zlib
 # version specific components
 _USE_PHP_VER5=	${_USE_PHP_ALL} phar sqlite3
@@ -320,7 +320,7 @@ mysqli_DEPENDS=	databases/php${PHP_VER}-mysqli
 ncurses_DEPENDS=devel/php${PHP_VER}-ncurses
 odbc_DEPENDS=	databases/php${PHP_VER}-odbc
 oci8_DEPENDS=	databases/php${PHP_VER}-oci8
-.if ${PHP_VER} == 55 || ${PHP_VER} == 56
+.if ${PHP_VER} == 55 || ${PHP_VER} == 56 || ${PHP_VER} == 7
 opcache_DEPENDS=	www/php${PHP_VER}-opcache
 .else
 opcache_DEPENDS=	www/pecl-zendopcache

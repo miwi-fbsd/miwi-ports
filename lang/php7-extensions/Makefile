@@ -13,7 +13,7 @@ MAINTAINER=	ale@FreeBSD.org
 COMMENT=	"meta-port" to install PHP extensions
 
 USE_PHP=	yes
-PHP_DEFAULT=	7.0
+PHP_DEFAULT=	7
 IGNORE_WITH_PHP=53 54 55 56 5
 USE_PHP_BUILD=	yes
 
