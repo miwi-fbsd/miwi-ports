@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	tempora
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	miwi@FreeBSD.org
-COMMENT=	FOOBAR
+COMMENT=	Objects and routines pertaining to date and time
 
 LICENSE=	MIT
 
