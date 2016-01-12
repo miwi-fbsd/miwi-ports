@@ -310,10 +310,8 @@ mbstring_DEPENDS=	converters/php${PHP_VER}-mbstring
 mcrypt_DEPENDS=	security/php${PHP_VER}-mcrypt
 memcache_DEPENDS=	databases/pecl-memcache
 mhash_DEPENDS=	security/php${PHP_VER}-mhash
-.if ${PHP_VER} == 55 || ${PHP_VER} == 56
 mssql_DEPENDS=	databases/php${PHP_VER}-mssql
 mysql_DEPENDS=	databases/php${PHP_VER}-mysql
-.endif
 mysqli_DEPENDS=	databases/php${PHP_VER}-mysqli
 ncurses_DEPENDS=devel/php${PHP_VER}-ncurses
 odbc_DEPENDS=	databases/php${PHP_VER}-odbc
@@ -349,9 +347,7 @@ sockets_DEPENDS=net/php${PHP_VER}-sockets
 spl_DEPENDS=	devel/php${PHP_VER}-spl
 sqlite_DEPENDS=	databases/php${PHP_VER}-sqlite
 sqlite3_DEPENDS=databases/php${PHP_VER}-sqlite3
-.if ${PHP_VER} == 55 || ${PHP_VER} == 56
 sybase_ct_DEPENDS=	databases/php${PHP_VER}-sybase_ct
-.endif
 sysvmsg_DEPENDS=devel/php${PHP_VER}-sysvmsg
 sysvsem_DEPENDS=devel/php${PHP_VER}-sysvsem
 sysvshm_DEPENDS=devel/php${PHP_VER}-sysvshm
