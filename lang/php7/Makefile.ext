@@ -4,7 +4,7 @@ USE_PHP=	yes
 USE_PHPEXT=	yes
 PHP_MODNAME=	${PKGNAMESUFFIX:S/-//}
 PHP_DEFAULT=	7
-IGNORE_WITH_PHP=52 53 54 55 56 5
+IGNORE_WITH_PHP=54 55 56 5
 
 EXTSUBDIR=	${DISTNAME}/ext/${PHP_MODNAME}
 WRKSRC=		${WRKDIR}/${EXTSUBDIR}
@@ -148,6 +148,12 @@ CONFIGURE_ARGS+=--with-interbase=${LOCALBASE}
 
 USE_FIREBIRD=	yes
 .endif
+
+.if ${PHP_MODNAME} == "intl"
+CONFIGURE_ARGS+=--with-intl=${LOCALBASE}
+LIB_DEPENDS=	libicui18n.so:${PORTSDIR}/devel/icu
+.endif
+
 
 .if ${PHP_MODNAME} == "json"
 CONFIGURE_ARGS+=--enable-json
