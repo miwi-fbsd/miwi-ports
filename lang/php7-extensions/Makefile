@@ -4,21 +4,16 @@
 PORTNAME=	php7
 PORTVERSION=	1.0
 CATEGORIES=	lang
-MASTER_SITES=	# none
 PKGNAMESUFFIX=	-extensions
-DISTFILES=	# none
-EXTRACT_ONLY=	# none
 
 MAINTAINER=	php@FreeBSD.org
 COMMENT=	"meta-port" to install PHP extensions
 
+USES=		metaport
 USE_PHP=	yes
 PHP_DEFAULT=	7
-IGNORE_WITH_PHP=53 54 55 56 5
+IGNORE_WITH_PHP=54 55 56
 USE_PHP_BUILD=	yes
-
-NO_BUILD=	yes
-NO_MTREE=	yes
 
 OPTIONS_DEFINE=	BCMATH BZ2 CALENDAR CTYPE CURL DBA \
 		DOM EXIF FILEINFO FILTER FTP GD GETTEXT \
@@ -121,8 +116,5 @@ OPTIONS_DEFAULT=	CTYPE \
 USE_PHP+=	${opt:tl}
 .	endif
 .endfor
-
-do-install: build
-	@${DO_NADA}
 
 .include <bsd.port.mk>
