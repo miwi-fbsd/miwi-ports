@@ -239,7 +239,8 @@ USE_FIREBIRD=	yes
 
 .if ${PHP_MODNAME} == "pdo_mysql"
 CONFIGURE_ARGS+=--with-pdo-mysql=mysqlnd
-USE_PHP+=mysql
+USE_PHP=pdo
+USE_PHP_BUILD=	yes
 .else
 CONFIGURE_ARGS+=--with-pdo-mysql=${LOCALBASE} \
 		--with-zlib-dir=/usr
