@@ -238,13 +238,14 @@ USE_FIREBIRD=	yes
 .endif
 
 .if ${PHP_MODNAME} == "pdo_mysql"
-OPTIONS_DEFINE=	MYSQLND
-OPTIONS_DEFAULT=MYSQLND
-
-MYSQLND_DESC=	Use MySQL Native Driver
-
-USE_PHP=	pdo
-USE_PHP_BUILD=	yes
+.if ${PORT_OPTIONS:MMYSQLND}
+CONFIGURE_ARGS+=--with-pdo-mysql=mysqlnd
+USE_PHP+=mysql
+.else
+CONFIGURE_ARGS+=--with-pdo-mysql=${LOCALBASE} \
+		--with-zlib-dir=/usr
+USE_MYSQL=	yes
+.endif
 .endif
 
 .if ${PHP_MODNAME} == "pdo_odbc"

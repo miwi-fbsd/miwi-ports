@@ -53,7 +53,7 @@ IPV6_DESC=	Enable ipv6 support
 LINKTHR_DESC=	Link thread lib (for threaded extensions)
 ZTS_DESC=	Force Zend Thread Safety (ZTS) build
 
-CONFLICTS=	php53-5* php54-5* php55-5*i php56-* php5-5*
+CONFLICTS=	php55-5*i php56-* php5-5*
 
 DESTDIRNAME=	INSTALL_ROOT
 
