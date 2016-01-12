@@ -48,7 +48,6 @@ JSON_DESC=		JavaScript Object Serialization support
 LDAP_DESC=		OpenLDAP support
 MBSTRING_DESC=		multibyte string support
 MCRYPT_DESC=		Encryption support
-MYSQL_DESC=		MySQL database support
 MYSQLI_DESC=		MySQLi database support
 ODBC_DESC=		ODBC support
 OPCACHE_DESC=		OPcache support
