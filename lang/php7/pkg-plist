@@ -232,7 +232,7 @@ include/php/main/streams/php_streams_int.h
 %%CLI%%include/php/sapi/cli/cli.h
 %%EMBED%%include/php/sapi/embed/php_embed.h
 include/php/main/win95nt.h
-%%EMBED%%lib/libphp5.so
+%%EMBED%%lib/libphp7.so
 lib/php/build/Makefile.global
 lib/php/build/acinclude.m4
 lib/php/build/config.guess
