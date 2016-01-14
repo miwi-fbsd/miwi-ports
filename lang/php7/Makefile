@@ -17,8 +17,10 @@ USES=		tar:bzip2 cpe
 CPE_PRODUCT=	php
 NO_OPTIONS_SORT=yes
 .if !defined(PKGNAMESUFFIX)
-USES+=		autoreconf:build gmake
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	autoconf
+#NOTE: libtools ends with Version mismatch error
+#USES+=		autoreconf gmake
+#GNU_CONFIGURE=	yes
 
 LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre
 
@@ -150,6 +152,7 @@ CONFIGURE_ARGS+=--enable-debug
 
 .if ${PORT_OPTIONS:MZTS}
 CONFIGURE_ARGS+=--enable-maintainer-zts
+USES=	localhost
 .endif
 
 .if ${PORT_OPTIONS:MDTRACE}
@@ -164,12 +167,19 @@ CONFIGURE_ARGS+=--disable-ipv6
 .endif
 
 post-patch:
-	@${TOUCH} ${WRKSRC}/ext/php_config.h
-	@${REINPLACE_CMD} "s|^\(extension_dir\)|; \1|" ${WRKSRC}/php.ini-*
+	${TOUCH} ${WRKSRC}/ext/php_config.h
+	${REINPLACE_CMD} "s|^\(extension_dir\)|; \1|" ${WRKSRC}/php.ini-*
 .if ${PORT_OPTIONS:MFPM}
-	@${REINPLACE_CMD} -e "s|^;\(pid\)|\1|;s|^;\(pm\.[a-z_]*_servers\)|\1|" \
+	${REINPLACE_CMD} -e "s|^;\(pid\)|\1|;s|^;\(pm\.[a-z_]*_servers\)|\1|" \
 		${WRKSRC}/sapi/fpm/php-fpm.conf.in
 .endif
+
+pre-configure:
+	${REINPLACE_CMD} -E 's:^((m4_)?divert)[(]([0-9]*)[)]:\1(600\3):' \
+	${WRKSRC}/configure.in `${FIND} ${WRKSRC} -name '*.m4'`
+	${RM} ${WRKSRC}/configure
+	${CAT} ${WRKSRC}/acinclude.m4 ${WRKSRC}/build/libtool.m4 > ${WRKSRC}/aclocal.m4
+
 
 .if !defined(PKGNAMEPREFIX)
 post-build:
