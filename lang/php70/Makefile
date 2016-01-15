@@ -87,7 +87,7 @@ CONFIGURE_ARGS+=--enable-fpm \
 
 .if defined(PKGNAMEPREFIX)
 USE_PHP=	yes
-PHP_DEFAULT=	7.0
+PHP_DEFAULT=	70
 IGNORE_WITH_PHP=53 54 55 56 5
 USE_APACHE=	22+
 .include "${PORTSDIR}/Mk/bsd.apache.mk"
