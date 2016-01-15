@@ -183,7 +183,7 @@ pre-configure:
 
 .if !defined(PKGNAMEPREFIX)
 post-build:
-	@${ECHO_CMD} "PHP_VER=7" > ${WRKDIR}/php.conf
+	@${ECHO_CMD} "PHP_VER=70" > ${WRKDIR}/php.conf
 	@${ECHO_CMD} "PHP_VERSION=${PORTVERSION}" >> ${WRKDIR}/php.conf
 	@${ECHO_CMD} "PHP_SAPI=${PHP_SAPI}" >> ${WRKDIR}/php.conf
 	@${ECHO_CMD} "PHP_EXT_INC=pcre spl" >> ${WRKDIR}/php.conf

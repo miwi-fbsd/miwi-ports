@@ -56,7 +56,7 @@ PHP_EXT_DIR!=	${PHPBASE}/bin/php-config --extension-dir | ${SED} -ne 's,^${PHPBA
 DEFAULT_PHP_VER?=	${PHP_DEFAULT:S/.//}
 
 PHP_VER?=	${DEFAULT_PHP_VER}
-.if ${PHP_VER}  == 7
+.if ${PHP_VER}  == 70
 PHP_EXT_DIR=   20151012
 PHP_EXT_INC=    pcre spl
 .elif ${PHP_VER}  == 56
