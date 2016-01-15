@@ -4,9 +4,9 @@
 CATEGORIES=	www devel
 PKGNAMEPREFIX=	mod_
 
-MAINTAINER=	ale@FreeBSD.org
+MAINTAINER=	miwi@FreeBSD.org
 
-PHP_PORT=	lang/php7
+PHP_PORT=	lang/php70
 MASTERDIR=	${.CURDIR}/../../${PHP_PORT}
 
 OPTIONS_DEFINE=	AP2FILTER

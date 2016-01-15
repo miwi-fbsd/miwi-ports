@@ -3,7 +3,7 @@
 
 CATEGORIES=	net
 
-MASTERDIR=	${.CURDIR}/../../lang/php7
+MASTERDIR=	${.CURDIR}/../../lang/php70
 
 PKGNAMESUFFIX=	-ldap
 

@@ -3,7 +3,7 @@
 
 CATEGORIES=	www
 
-MASTERDIR=	${.CURDIR}/../../lang/php7
+MASTERDIR=	${.CURDIR}/../../lang/php70
 
 PKGNAMESUFFIX=	-opcache
 
