@@ -11,7 +11,7 @@ COMMENT=	"meta-port" to install PHP extensions
 
 USES=		metaport
 USE_PHP=	yes
-PHP_DEFAULT=	70
+PHP_DEFAULT=	7.0
 IGNORE_WITH_PHP=54 55 56 5
 USE_PHP_BUILD=	yes
 
