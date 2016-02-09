@@ -136,10 +136,7 @@ CONFIGURE_ARGS+=--with-zend-vm=SWITCH
 CONFIGURE_ARGS+=--with-zend-vm=GOTO
 .endif
 
-CONFIGURE_ENV+=	ac_cv_pthreads_lib="" \
-		ac_cv_pthreads_cflags="" \
-		ac_cv_decimal_fp_supported="no" \
-		pthreads_working="yes" \
+CONFIGURE_ENV+=	ac_cv_decimal_fp_supported="no" \
 		lt_cv_path_SED="sed"
 
 .if ${PORT_OPTIONS:MLINKTHR}
