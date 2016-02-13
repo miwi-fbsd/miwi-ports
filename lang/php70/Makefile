@@ -32,7 +32,6 @@ CONFIGURE_ARGS+=--with-layout=GNU \
 		--enable-mysqlnd \
 		--with-libxml-dir=${LOCALBASE} \
 		--with-pcre-regex=${LOCALBASE} \
-		--with-zlib-dir=/usr \
 		--program-prefix=""
 
 USE_GNOME=	libxml2
@@ -164,10 +163,10 @@ CONFIGURE_ARGS+=--disable-ipv6
 .endif
 
 post-patch:
-	${TOUCH} ${WRKSRC}/ext/php_config.h
-	${REINPLACE_CMD} "s|^\(extension_dir\)|; \1|" ${WRKSRC}/php.ini-*
+	@${TOUCH} ${WRKSRC}/ext/php_config.h
+	@${REINPLACE_CMD} "s|^\(extension_dir\)|; \1|" ${WRKSRC}/php.ini-*
 .if ${PORT_OPTIONS:MFPM}
-	${REINPLACE_CMD} -e "s|^;\(pid\)|\1|;s|^;\(pm\.[a-z_]*_servers\)|\1|" \
+	@${REINPLACE_CMD} -e "s|^;\(pid\)|\1|;s|^;\(pm\.[a-z_]*_servers\)|\1|" \
 		${WRKSRC}/sapi/fpm/php-fpm.conf.in
 .endif
 
