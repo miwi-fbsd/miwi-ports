@@ -172,10 +172,10 @@ post-patch:
 .endif
 
 pre-configure:
-	${REINPLACE_CMD} -E 's:^((m4_)?divert)[(]([0-9]*)[)]:\1(600\3):' \
-	${WRKSRC}/configure.in `${FIND} ${WRKSRC} -name '*.m4'`
-	${RM} ${WRKSRC}/configure
-	${CAT} ${WRKSRC}/acinclude.m4 ${WRKSRC}/build/libtool.m4 > ${WRKSRC}/aclocal.m4
+	@${REINPLACE_CMD} -E 's:^((m4_)?divert)[(]([0-9]*)[)]:\1(600\3):' \
+		@${WRKSRC}/configure.in `${FIND} ${WRKSRC} -name '*.m4'`
+	@${RM} ${WRKSRC}/configure
+	@${CAT} ${WRKSRC}/acinclude.m4 ${WRKSRC}/build/libtool.m4 > ${WRKSRC}/aclocal.m4
 
 
 .if !defined(PKGNAMEPREFIX)
