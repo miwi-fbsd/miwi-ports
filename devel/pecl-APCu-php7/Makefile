@@ -1,5 +1,5 @@
 # Created by: John Chen <johnpupu@gmail.com>
-# $FreeBSD: head/devel/pecl-APCu/Makefile 403643 2015-12-12 23:44:00Z sunpoet $
+# $FreeBSD$
 
 PORTNAME=	APCu
 PORTVERSION=	5.1.3

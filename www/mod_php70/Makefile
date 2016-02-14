@@ -1,5 +1,5 @@
 # Created by:	marcus@FreeBSD.org
-# $FreeBSD: head/www/mod_php56/Makefile 367268 2014-09-04 14:24:25Z ale $
+# $FreeBSD$
 
 CATEGORIES=	www devel
 PKGNAMEPREFIX=	mod_

@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: head/ftp/php7-curl/Makefile 367268 2014-09-04 14:24:25Z ale $
+# $FreeBSD$
 
 CATEGORIES=	ftp
 

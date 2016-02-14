@@ -1,5 +1,5 @@
 # Created by: Alex Dupre <ale@FreeBSD.org>
-# $FreeBSD: head/archivers/php56-zip/Makefile 398632 2015-10-05 09:37:54Z ale $
+# $FreeBSD$
 
 CATEGORIES=	archivers
 

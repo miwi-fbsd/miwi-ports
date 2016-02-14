@@ -1,5 +1,5 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
-# $FreeBSD: head/www/php56-opcache/Makefile 367268 2014-09-04 14:24:25Z ale $
+# $FreeBSD$
 
 CATEGORIES=	www
 
